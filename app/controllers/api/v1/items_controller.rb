@@ -1,4 +1,5 @@
 class Api::V1::ItemsController < Api::V1::BaseController
+
   def index
     @items = Item.all
   end
@@ -7,6 +8,17 @@ class Api::V1::ItemsController < Api::V1::BaseController
     @item = Item.find(params[:id])
   end
 
-  private
+  def destroy
+    @restaurant.destroy
+    head :no_content
+    # No need to create a `destroy.json.jbuilder` view
+  end
+
+end
+
+
+
+
+
 
 end
