@@ -3,3 +3,4 @@ json.items do
     json.extract! item, :id, :name, :content
   end
 end
+
